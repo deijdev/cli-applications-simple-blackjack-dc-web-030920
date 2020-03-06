@@ -35,7 +35,7 @@ end
 
 def invalid_command
   # code invalid_command here
-  puts "Invalid Command!"
+  puts "Please enter a valid command"
 end
 
 def hit?
