@@ -27,10 +27,12 @@ def end_game(number)
   puts "Sorry, you hit #{number}. Thanks for playing!"
 end
 
-def initial_round 
-   sum = deal_card + deal_card
-  display_card_total(round_one)
-  return round_one
+def initial_round
+  card_one = deal_card
+  card_two = deal_card
+  card_total = card_one + card_two
+  display_card_total(card_total) #once you have figured out the sum of your two cards, you can pass the total in as an argumnt so your phrase is displayed.
+  return card_total
 end
 
 def invalid_command
