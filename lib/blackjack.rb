@@ -51,7 +51,7 @@ end
 
 def invalid_command
   # code invalid_command here
-  puts ""
+  puts "Invalid Command!"
 end
 
 #####################################################
