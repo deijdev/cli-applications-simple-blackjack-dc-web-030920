@@ -35,17 +35,25 @@ def initial_round
   return card_total
 end
 
-def hit?(x)
+def hit?(current_card_value)
   prompt_user
-    case get_user_input
-    when "s"
-      x
-    when "h"
-      x += deal_card
-    when others
-      invalid_command
-    end
-  end	
+  user_input = get_user_input
+  while user_input != "h" && user_input != "s"
+    invalid_command
+    prompt_user
+    user_input = get_user_input
+  end
+  if user_input == "h"
+    current_card_value += deal_card
+  end
+  return current_card_value
+end
+
+def invalid_command
+  # code invalid_command here
+  puts "Please enter a valid command"
+  prompt_user
+end
 
 def invalid_command
   # code invalid_command here
