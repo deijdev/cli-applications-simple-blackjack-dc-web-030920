@@ -27,10 +27,15 @@ def end_game(number)
   puts "Sorry, you hit #{number}. Thanks for playing!"
 end
 
-def initial_round(sum)
+def initial_round 
    sum = deal_card + deal_card
-  display_card_total(sum)
-  return sum
+  display_card_total(round_one)
+  return round_one
+end
+
+def invalid_command
+  # code invalid_command here
+  puts "Invalid Command!"
 end
 
 def hit?
@@ -44,11 +49,6 @@ def hit?
   else
     invalid_command
   end
-end
-
-def invalid_command
-  # code invalid_command here
-  puts "Invalid Command!"
 end
 
 #####################################################
