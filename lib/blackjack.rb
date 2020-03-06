@@ -22,15 +22,15 @@ def get_user_input
   gets.chomp.strip
 end
 
-def end_game
+def end_game(number)
   # code #end_game here
-  puts "Sorry, you hit #{card_total}. Thanks for playing!"
+  puts "Sorry, you hit #{number}. Thanks for playing!"
 end
 
-def initial_round
-   round_one = deal_card + deal_card
-  display_card_total(round_one)
-  return round_one
+def initial_round(sum)
+   sum = deal_card + deal_card
+  display_card_total(sum)
+  return sum
 end
 
 def hit?
